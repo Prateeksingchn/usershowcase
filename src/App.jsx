@@ -23,7 +23,7 @@ const Form = ({ onSubmit, onCancel, initialValues = null }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white shadow-lg rounded-lg p-8 mb-8 w-full">
+    <form onSubmit={handleSubmit} className="bg-white flex gap-5 shadow-lg rounded-lg p-8 mb-8 w-full">
       <h2 className="text-3xl font-bold mb-6 text-gray-800">
         {initialValues ? 'Edit User' : 'Add User'}
       </h2>
@@ -73,13 +73,13 @@ const Form = ({ onSubmit, onCancel, initialValues = null }) => {
         <button
           type="button"
           onClick={handleCancel}
-          className="bg-gray-500 text-white px-5 py-2 rounded-lg hover:bg-gray-600 transition duration-300"
+          className="bg-gray-500 text-white px-2 py-1 rounded-lg hover:bg-gray-600 transition duration-300"
         >
           Cancel
         </button>
         <button
           type="submit"
-          className="bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-700 transition duration-300"
+          className="bg-indigo-600 text-white px-2 py-1 rounded-lg hover:bg-indigo-700 transition duration-300"
         >
           {initialValues ? 'Update User' : 'Add User'}
         </button>
@@ -187,8 +187,8 @@ const App = () => {
   };
 
   return (
-    <div className="max-w-8xl h-[100vh] my-auto mx-auto p-8 bg-gray-700">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="max-w-5xl  mx-auto p-8 bg-gray-700">
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
         <div>
           {editUser ? (
             <Form
