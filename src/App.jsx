@@ -14,7 +14,7 @@ const Form = ({ onSubmit, onCancel, initialValues = null }) => {
     setEmail('');
     setContact('');
   };
-
+  
   const handleCancel = () => {
     onCancel();
     setName('');
